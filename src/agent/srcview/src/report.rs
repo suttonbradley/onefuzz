@@ -511,7 +511,7 @@ impl Report {
                         let hits = if hit_srclocs.contains(srcloc) {
                             "1"
                         } else {
-                            "0"
+                            continue;
                         };
 
                         ew.write_event(Event::Empty(
@@ -541,7 +541,7 @@ impl Report {
                     let hits = if hit_srclocs.contains(srcloc) {
                         "1"
                     } else {
-                        "0"
+                        continue;
                     };
 
                     ew.write_event(Event::Empty(
